@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>	
+	<IsEncrypted>N</IsEncrypted>
+	<Password>B@nking324..</Password>
+	<Username></Username>
+	<NavWebService>http://navtest.stima-sacco.local:2022/NAVTEST/WS/STIMASACCO/Codeunit/PESALinkTransfer</NavWebService>
+	<ServiceTimerInterval>60000</ServiceTimerInterval>
+</Settings>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="GetEntryToTransfer">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetEntryToTransfer_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateTransferStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="requestID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="statusOfRequestCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateTransferStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetEntryToSeekStatus">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetEntryToSeekStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetISODescription">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="actionCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetISODescription_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CheckValidAccountDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CheckValidAccountDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertDepositEntry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="sourceReferenceNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceBankCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceAccountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceAccountName" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="purpose" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amountToTransfer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="destinationAccountNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertDepositEntry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetEntryToSeekDepositStatus">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="GetEntryToSeekDepositStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDepositStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceReferenceNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceBankCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="sourceAccountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amountToTransfer" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="destinationAccountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UpdateDepositStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostPESALinkDeposits">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostPESALinkDeposits_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="GetEntryToTransfer">
+    <part name="parameters" element="tns:GetEntryToTransfer" />
+  </message>
+  <message name="GetEntryToTransfer_Result">
+    <part name="parameters" element="tns:GetEntryToTransfer_Result" />
+  </message>
+  <message name="UpdateTransferStatus">
+    <part name="parameters" element="tns:UpdateTransferStatus" />
+  </message>
+  <message name="UpdateTransferStatus_Result">
+    <part name="parameters" element="tns:UpdateTransferStatus_Result" />
+  </message>
+  <message name="GetEntryToSeekStatus">
+    <part name="parameters" element="tns:GetEntryToSeekStatus" />
+  </message>
+  <message name="GetEntryToSeekStatus_Result">
+    <part name="parameters" element="tns:GetEntryToSeekStatus_Result" />
+  </message>
+  <message name="GetISODescription">
+    <part name="parameters" element="tns:GetISODescription" />
+  </message>
+  <message name="GetISODescription_Result">
+    <part name="parameters" element="tns:GetISODescription_Result" />
+  </message>
+  <message name="CheckValidAccountDetails">
+    <part name="parameters" element="tns:CheckValidAccountDetails" />
+  </message>
+  <message name="CheckValidAccountDetails_Result">
+    <part name="parameters" element="tns:CheckValidAccountDetails_Result" />
+  </message>
+  <message name="InsertDepositEntry">
+    <part name="parameters" element="tns:InsertDepositEntry" />
+  </message>
+  <message name="InsertDepositEntry_Result">
+    <part name="parameters" element="tns:InsertDepositEntry_Result" />
+  </message>
+  <message name="GetEntryToSeekDepositStatus">
+    <part name="parameters" element="tns:GetEntryToSeekDepositStatus" />
+  </message>
+  <message name="GetEntryToSeekDepositStatus_Result">
+    <part name="parameters" element="tns:GetEntryToSeekDepositStatus_Result" />
+  </message>
+  <message name="UpdateDepositStatus">
+    <part name="parameters" element="tns:UpdateDepositStatus" />
+  </message>
+  <message name="UpdateDepositStatus_Result">
+    <part name="parameters" element="tns:UpdateDepositStatus_Result" />
+  </message>
+  <message name="PostPESALinkDeposits">
+    <part name="parameters" element="tns:PostPESALinkDeposits" />
+  </message>
+  <message name="PostPESALinkDeposits_Result">
+    <part name="parameters" element="tns:PostPESALinkDeposits_Result" />
+  </message>
+  <portType name="PESALinkTransfer_Port">
+    <operation name="GetEntryToTransfer">
+      <input name="GetEntryToTransfer" message="tns:GetEntryToTransfer" />
+      <output name="GetEntryToTransfer_Result" message="tns:GetEntryToTransfer_Result" />
+    </operation>
+    <operation name="UpdateTransferStatus">
+      <input name="UpdateTransferStatus" message="tns:UpdateTransferStatus" />
+      <output name="UpdateTransferStatus_Result" message="tns:UpdateTransferStatus_Result" />
+    </operation>
+    <operation name="GetEntryToSeekStatus">
+      <input name="GetEntryToSeekStatus" message="tns:GetEntryToSeekStatus" />
+      <output name="GetEntryToSeekStatus_Result" message="tns:GetEntryToSeekStatus_Result" />
+    </operation>
+    <operation name="GetISODescription">
+      <input name="GetISODescription" message="tns:GetISODescription" />
+      <output name="GetISODescription_Result" message="tns:GetISODescription_Result" />
+    </operation>
+    <operation name="CheckValidAccountDetails">
+      <input name="CheckValidAccountDetails" message="tns:CheckValidAccountDetails" />
+      <output name="CheckValidAccountDetails_Result" message="tns:CheckValidAccountDetails_Result" />
+    </operation>
+    <operation name="InsertDepositEntry">
+      <input name="InsertDepositEntry" message="tns:InsertDepositEntry" />
+      <output name="InsertDepositEntry_Result" message="tns:InsertDepositEntry_Result" />
+    </operation>
+    <operation name="GetEntryToSeekDepositStatus">
+      <input name="GetEntryToSeekDepositStatus" message="tns:GetEntryToSeekDepositStatus" />
+      <output name="GetEntryToSeekDepositStatus_Result" message="tns:GetEntryToSeekDepositStatus_Result" />
+    </operation>
+    <operation name="UpdateDepositStatus">
+      <input name="UpdateDepositStatus" message="tns:UpdateDepositStatus" />
+      <output name="UpdateDepositStatus_Result" message="tns:UpdateDepositStatus_Result" />
+    </operation>
+    <operation name="PostPESALinkDeposits">
+      <input name="PostPESALinkDeposits" message="tns:PostPESALinkDeposits" />
+      <output name="PostPESALinkDeposits_Result" message="tns:PostPESALinkDeposits_Result" />
+    </operation>
+  </portType>
+  <binding name="PESALinkTransfer_Binding" type="tns:PESALinkTransfer_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="GetEntryToTransfer">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:GetEntryToTransfer" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetEntryToTransfer">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetEntryToTransfer_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateTransferStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:UpdateTransferStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateTransferStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateTransferStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetEntryToSeekStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:GetEntryToSeekStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetEntryToSeekStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetEntryToSeekStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetISODescription">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:GetISODescription" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetISODescription">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetISODescription_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CheckValidAccountDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:CheckValidAccountDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CheckValidAccountDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CheckValidAccountDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertDepositEntry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:InsertDepositEntry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertDepositEntry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertDepositEntry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetEntryToSeekDepositStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:GetEntryToSeekDepositStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetEntryToSeekDepositStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetEntryToSeekDepositStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateDepositStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:UpdateDepositStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateDepositStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateDepositStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostPESALinkDeposits">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PESALinkTransfer:PostPESALinkDeposits" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostPESALinkDeposits">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostPESALinkDeposits_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PESALinkTransfer">
+    <port name="PESALinkTransfer_Port" binding="tns:PESALinkTransfer_Binding">
+      <address location="http://navtest.stima-sacco.local:2022/NAVTEST/WS/STIMASACCO/Codeunit/PESALinkTransfer" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>
