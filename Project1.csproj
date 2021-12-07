@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config.xml" />
+    <Content Include="image\windowserve.PNG" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
